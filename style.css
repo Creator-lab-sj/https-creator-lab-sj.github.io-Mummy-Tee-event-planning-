@@ -1,0 +1,215 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+header {
+    background: url('header-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+header p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #ff9800;
+}
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.service-item {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+.service-item:hover {
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+.service-item h3 {
+    font-size: 1.8em;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+.service-item p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+.portfolio {
+    text-align: center;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+.slider img.active {
+    display: block;
+    opacity: 1;
+}
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.testimonials {
+    background-color: #ff9800;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.testimonials blockquote {
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 1.5em;
+}
+.testimonials cite {
+    font-size: 1.2em;
+    margin-top: 10px;
+    display: block;
+}
+.contact {
+    text-align: center;
+}
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.contact form input, .contact form textarea {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fafafa;
+    transition: background-color 0.3s ease;
+}
+.contact form input:focus, .contact form textarea:focus {
+    background-color: #fff;
+    border-color: #ff9800;
+    outline: none;
+}
+.contact form button {
+    padding: 15px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+.contact form button:hover {
+    background-color: #e68900;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-radius: 10px 10px 0 0;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .service-item {
+        flex-basis: 100%;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+    .slider img {
+        height: 250px;
+        object-fit: cover;
+    }
+    .contact form {
+        padding: 20px;
+    }
+}
